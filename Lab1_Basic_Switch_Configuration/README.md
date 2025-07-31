@@ -160,6 +160,7 @@ Vlan1 is administratively down, line protocol is down
 ```
 
 IP-адрес не назначен (В выводе нет строки с IP-адресом)
+
 MAC-адрес интерфейса 0010.1126.5549 - указан в строке address is 0010.1126.5549 (bia 0010.1126.5549)
 
 Статус интерфейса (up/down) - Vlan1 is administratively down, line protocol is down 
@@ -338,7 +339,7 @@ S1(config-if)#
 %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
 S1(config-if)#exit
 ```
-Настройте доступ через консольный порт
+Настройте доступ через консольный порт:
 ```
 S1(config-if)#exit
 S1(config)#line con 0
@@ -348,7 +349,7 @@ S1(config-line)#loggin sy
 S1(config-line)#loggin synchronous 
 S1(config-line)#exit
 ```
-Настройте каналы VTY для удаленного управления
+Настройте каналы VTY для удаленного управления:
 
 ```
 S1(config)#line vty 0 15
@@ -370,7 +371,7 @@ S1#
 - Протестируйте сквозное соединение, отправив эхо-запрос
 - Протестируйте возможности удаленного управления с помощью Telnet
 
-#### Проверка текущей конфигурации
+#### Проверка текущей конфигурации:
 ```
 S1#show run
 Building configuration...
@@ -482,7 +483,7 @@ end
 - ✓ VTY доступ: пароль cisco на линиях 0-15
 
 
-#### Параметры VLAN 1
+#### Параметры VLAN 1:
 
 ```
 S1#show interface vlan 1
@@ -542,7 +543,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
 ```
 
-#### Проверка удаленного управления коммутатором S1
+#### Проверка удаленного управления коммутатором S1:
 ```
 C:\>telnet 192.168.1.2
 Trying 192.168.1.2 ...OpenUnauthorized access is strictly prohibited. 
@@ -561,6 +562,7 @@ S1#exit
 
 [Connection to 192.168.1.2 closed by foreign host]
 ```
+Вопросы:
 
 Зачем необходимо настраивать пароль VTY для коммутатора?
 
@@ -568,5 +570,4 @@ S1#exit
 
 Что нужно сделать, чтобы пароли не отправлялись в незашифрованном виде?
 
--Включить шифрование паролей: service password-encryption.
-Использовать SSH вместо. Telnet: SSH шифрует весь трафик сессии
+-Включить шифрование паролей: service password-encryption. Использовать SSH вместо. Telnet: SSH шифрует весь трафик сессии
