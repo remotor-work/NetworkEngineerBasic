@@ -282,8 +282,13 @@ Internet Address      Physical Address      Type
 
 ## Заключение
 
-**Файл конфигурации:** Для работы с готовой конфигурацией скачайте файл `Lab2_Viewing_the switch's_MAC_address_table.pkt` из репозитория (Lab2_Viewing_the%20switch's_MAC_address_table.pkt)
-
 ![Итоговая схема с MAC-адресами](images/final_result.png)
 
 В ходе лабораторной работы было изучено, как коммутаторы строят и используют таблицы MAC-адресов для пересылки кадров Ethernet. Показано, как коммутатор изучает MAC-адреса источников и сопоставляет их с портами, а также как происходит пересылка кадров на основе этой информации.
+
+
+## Файлы проекта
+
+- `README.md` - данная лабораторная работа
+- `Lab2_Viewing_the_switch_MAC_address_table.pkt` - конфигурация Packet Tracer
+- `images/` - скриншоты и схемы
